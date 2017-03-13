@@ -25,10 +25,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@mipmap/weixin"
+            android:drawableTop="@drawable/selector_weixin"
             android:gravity="center"
             android:onClick="onCheckedChange"
             android:text="微信"
+            android:checked="true"
+            android:textColor="@drawable/main_button_text_color"
             android:textSize="18sp"/>
 
         <RadioButton
@@ -37,10 +39,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@mipmap/tongxunlu"
+            android:drawableTop="@drawable/selector_tongxunlu"
             android:gravity="center"
             android:onClick="onCheckedChange"
             android:text="通讯录"
+            android:textColor="@drawable/main_button_text_color"
             android:textSize="18sp"/>
             <RadioButton
                 android:id="@+id/faxian"
@@ -48,10 +51,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@mipmap/faxian"
+                android:drawableTop="@drawable/selector_faxian"
                 android:gravity="center"
                 android:onClick="onCheckedChange"
                 android:text="发现"
+                android:textColor="@drawable/main_button_text_color"
                 android:textSize="18sp"/>
             <RadioButton
                 android:id="@+id/me"
@@ -59,10 +63,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@mipmap/me"
+                android:drawableTop="@drawable/selector_me"
                 android:gravity="center"
                 android:onClick="onCheckedChange"
                 android:text="我"
+                android:textColor="@drawable/main_button_text_color"
                 android:textSize="18sp"/>
 
         </RadioGroup>
