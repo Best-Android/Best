@@ -5,7 +5,8 @@
     tools:context="com.best.limingxing.best.fragment.WeiXinFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
+        android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="weixin" />
