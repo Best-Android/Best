@@ -16,7 +16,7 @@ import java.util.List;
 public class JSONArray {
     private static final String TAG = JSONArray.class.getSimpleName();
 
-    public void parseJson(final String str){
+    public static GankPerson parseJson(final String str){
             GankPerson gankPerson = null;
             try {
                 JSONObject jsonObject = new JSONObject(str);
@@ -57,5 +57,6 @@ public class JSONArray {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+        return gankPerson;
     }
 }

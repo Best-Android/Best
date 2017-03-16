@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.best.limingxing.best.R;
+import com.best.limingxing.best.bean.GankPerson;
 import com.best.limingxing.best.bean.JSONArray;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
@@ -43,8 +44,7 @@ public class WeiXinFragment extends Fragment {
 
             @Override
             public void onResponse(String response, int id) {
-                JSONArray jsonArray = new JSONArray();
-                jsonArray.parseJson(response);
+                GankPerson gankPerson = JSONArray.parseJson(response);
 
             }
         });
