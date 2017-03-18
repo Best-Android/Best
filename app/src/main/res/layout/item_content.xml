@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/text_kong1"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/ivImage"
+        android:background="#f0f0f0"/>
+    <TextView
+        android:id="@+id/text_desc"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/text_kong1"/>
+    <TextView
+        android:id="@+id/text_kong2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/text_desc"
+        android:background="#f0f0f0"/>
+    <TextView
+        android:id="@+id/text_who"
+        android:layout_width="190dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_kong2"/>
+    <TextView
+        android:id="@+id/text_createdat"
+        android:layout_width="190dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_kong2"
+        android:layout_toRightOf="@id/text_who"/>
+</RelativeLayout>
