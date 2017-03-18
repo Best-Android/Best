@@ -24,8 +24,8 @@ public class JSONArray {
                 boolean error = jsonObject.getBoolean("error");
                 org.json.JSONArray jsonArray = jsonObject.getJSONArray("results");
                 List<Person> list = new ArrayList<Person>();
-                List<String> imagesList = new ArrayList<String>();
                 for (int i = 0; i < jsonArray.length(); i++) {
+                    List<String> imagesList = new ArrayList<String>();
                     JSONObject jsonResults = (JSONObject) jsonArray.get(i);
                     String _id = jsonResults.getString("_id");
                     String createdAt = jsonResults.getString("createdAt");
