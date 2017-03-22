@@ -5,7 +5,6 @@
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:text="加载更多"
-    android:visibility="gone"
     android:layout_marginTop="5dp">
 
 </TextView>
