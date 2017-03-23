@@ -2,6 +2,7 @@ package com.best.limingxing.best.fragment;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,9 +14,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.best.limingxing.best.R;
+import com.best.limingxing.best.activity.WebViewActivity;
 import com.best.limingxing.best.bean.GankPerson;
 import com.best.limingxing.best.bean.JSONArray;
 import com.best.limingxing.best.bean.Person;
@@ -190,6 +194,7 @@ public class WeiXinFragment extends Fragment {
 
     //ViewHolder类
     class MyViewHolder extends RecyclerView.ViewHolder {
+        RelativeLayout relativeLayout;
         ImageView ivImage;
         TextView textDesc;
         TextView textWho;
@@ -197,10 +202,20 @@ public class WeiXinFragment extends Fragment {
 
         public MyViewHolder(View itemView) {
             super(itemView);
+            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout);
             ivImage = (ImageView) itemView.findViewById(R.id.ivImage);
             textDesc = (TextView) itemView.findViewById(R.id.text_desc);
             textWho = (TextView) itemView.findViewById(R.id.text_who);
             textCreatedat = (TextView) itemView.findViewById(R.id.text_createdat);
+            relativeLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Person person = (Person) view.getTag();
+                    String url = person.getUrl();
+                    Toast.makeText(getContext(), url, Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getContext(), WebViewActivity.class).putExtra("url",url));
+                }
+            });
         }
     }
 
@@ -273,6 +288,7 @@ public class WeiXinFragment extends Fragment {
                 Glide.with(context).load(gankPerson.getimages().get(0))
                         .placeholder(R.mipmap.ic_launcher).into(((MyViewHolder) holder).ivImage);
             }
+            myViewHolder.relativeLayout.setTag(gankPerson);
         }
 
         @Override
